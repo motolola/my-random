@@ -12,8 +12,18 @@ public class MyArray {
 		System.out.println(Arrays.toString(myIntegerArray()));
 		System.out.println(myList());
 		System.out.println(myStringList());
+		System.out.println(Arrays.toString(efor()));
 	}
 	
+	public static String[] efor() {
+		String[] food = {"beans", "rice", "yam", "corn", "coco"};
+		
+		for (String y : food) {
+			System.out.println(y);
+		}
+		
+		return food;
+	}
 	public static String[] myArr() {
 		
 		String arr[] = new String[3];
