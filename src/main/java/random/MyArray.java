@@ -2,6 +2,7 @@ package random;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Random;
 
 public class MyArray {
 
@@ -13,6 +14,18 @@ public class MyArray {
 		System.out.println(myList());
 		System.out.println(myStringList());
 		System.out.println(Arrays.toString(efor()));
+		System.out.println(randoms());
+	}
+	
+	public static ArrayList<Integer> randoms() {
+		Random randon = new Random();
+		ArrayList<Integer> myInt = new ArrayList<Integer>();
+		myInt.add(randon.nextInt(10));
+		myInt.add(randon.nextInt(10));
+		myInt.add(randon.nextInt(10));
+		myInt.add(randon.nextInt(10));
+		
+		return myInt;
 	}
 	
 	public static String[] efor() {
