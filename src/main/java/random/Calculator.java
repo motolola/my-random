@@ -41,6 +41,7 @@ public class Calculator {
 	public static ArrayList<Integer> prime(int primeNumberLessThan){
 		
 		ArrayList<Integer> primes = new ArrayList<>();
+		
 		for(int p = 2; p <= primeNumberLessThan; p++) {
 			int count = 0;
 			for(int i=2; i < p; i++) {
