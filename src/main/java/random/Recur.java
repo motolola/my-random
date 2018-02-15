@@ -1,14 +1,20 @@
 package random;
 
+import static org.mockito.Matchers.intThat;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.forwardedUrl;
+
 import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
+
 
 public class Recur {
 	
 	static int count = 0;
 
 	public static void main(String[] args) {
-      System.out.println(fact(5));
+      
+       System.out.println(fact(5));
+       
 		System.out.println(persistence(25));
       try {
 		tri(40);
@@ -16,6 +22,58 @@ public class Recur {
 		e.printStackTrace();
 	}
 		System.out.println(rowSumOddNumbers(4));
+		
+		int[] people = {25, 50, 50, 25};
+		System.out.println(Tickets(people));
+	}
+	/*
+	 * The new "Avengers" movie has just been released! There are a lot of people at the cinema box office standing in a huge line. Each of them has a single 100, 50 or 25 dollars bill. An "Avengers" ticket costs 25 dollars.
+
+Vasya is currently working as a clerk. He wants to sell a ticket to every single person in this line.
+
+Can Vasya sell a ticket to each person and give the change if he initially has no money and sells the tickets strictly in the order people follow in the line?
+
+Return YES, if Vasya can sell a ticket to each person and give the change with the bills he has at hand at that moment. Otherwise return NO.
+	Line.Tickets(new int[] {25, 25, 50}) // => YES 
+Line.Tickets(new int []{25, 100}) 
+         // => NO. Vasya will not have enough money to give change to 100 dollars
+	 */
+	public static String Tickets(int[] peopleInLine){
+		Arrays.sort(peopleInLine);
+
+		int denomination25Count = 0;
+		int denomination50Count = 0;
+		int denomination100Count = 0;
+		
+		for (int i = 0; i < peopleInLine.length; i++) {
+			if (peopleInLine[i] == 25) {
+				denomination25Count++;
+			} else if (peopleInLine[i] == 50) {
+				denomination50Count++;
+			} else if (peopleInLine[i] == 100) {
+				denomination100Count++;
+			}	
+		}
+		
+		//Deal with 50 first ... 
+		//Total Number of 25 MUST equal or greater than 50..
+		denomination25Count = denomination25Count - denomination50Count;
+		if (denomination25Count < 0) {
+			return "NO";
+		}
+		
+		//Deal with 100 now ...
+		int denomination25CountAfter50 = denomination25Count - denomination100Count;
+		if (denomination25CountAfter50 < 0) {
+			return "NO";
+		}
+		int change100 = denomination100Count * 75;
+		//denomination50Count = denomination50Count -
+		if (change100 > (denomination25CountAfter50 * 25 + denomination50Count * 50) ) {
+			return "NO";
+		}
+
+	        return "YES";
 	}
 	/*
 	 * This supposed to produced sum of rows in an Odd number tree such as 
