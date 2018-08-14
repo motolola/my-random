@@ -13,11 +13,11 @@ public class HomeController {
 
     @RequestMapping(value = "/")
     public String home(){
-        return "I am a boy is great learning ability";
+        return "I am a boy iof great learning ability";
     }
 
     @RequestMapping("/quote")
     public String quote(){
-        return restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api/random", String.class);
+            return restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api", String.class);
     }
 }
