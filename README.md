@@ -1,0 +1,3 @@
+# my-random
+
+I just used this to practice or test random snippet ...
