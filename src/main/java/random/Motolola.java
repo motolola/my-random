@@ -3,17 +3,14 @@ package random;
 public class Motolola {
 
 	public static void main(String[] args) {
-		System.out.println("  ***                 ***        *********         *****************       *********");
-		System.out.println("  ****               ****       ************       *****************      ************");
-		System.out.println("  ******            *****      ***         ***            ***            ***         ***");
-		System.out.println("  *******          ******     ***           ***           ***           ***           ***");
-		System.out.println("  ***  ***        *** ***    ***             ***          ***          ***             ***");
-		System.out.println("  ***   ***      ***  ***    ***              ***         ***          ***             ***");
-		System.out.println("  ***    ***   ***    ***    ***              ***         ***          ***             ***");
-		System.out.println("  ***     *******     ***     ***            ***          ***           ***            ***");
-		System.out.println("  ***      *****      ***      ***           ***          ***            ***          ***");
-		System.out.println("  ***      *****      ***       **************            ***             **************");
-		System.out.println("  ***      *****      ***         *********               ***               *********");
+
+		Object str = new String("Hello");
+        System.out.println(str);
+        if (str instanceof Integer){
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
 
 	}
 
