@@ -1,17 +1,20 @@
 package random;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Motolola {
 
 	public static void main(String[] args) {
 
-		String str = new String("str: Hello");
-        System.out.println(str);
+		List<Integer> myInts = new ArrayList<>();
 
-        str = "str: House";
-        System.out.println(str);
-        //System.out.println(main());
-
-	}
+		for (int i = 1; i <=1000; i++){
+		    myInts.add(i);
+        }
+        System.out.println(myInts.size());
+		myInts.forEach(System.out::println);
+    }
 
 	public static String main() {
 	    return "Soft";
