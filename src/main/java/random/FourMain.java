@@ -12,5 +12,9 @@ public class FourMain {
         System.out.println("3rd line: "+four.getScore());
         four.six();
         System.out.println("4th line: "+four.getScore());
+
+        if (four instanceof Object){
+            System.out.println("I am an Object");
+        }
     }
 }
