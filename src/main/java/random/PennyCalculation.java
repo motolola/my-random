@@ -8,8 +8,13 @@ public class PennyCalculation {
         for(int i = 1; i <= 30; i++){
             penny = penny * 2;
             System.out.println("Day "+i+": "+penny);
+
+
         }
         int result = penny/100; //Pence to Pounds
         System.out.println(result);
+
+        Integer myInt = new Integer(56);
+        System.out.println(Integer.toBinaryString(4));
     }
 }
