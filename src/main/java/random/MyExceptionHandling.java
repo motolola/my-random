@@ -13,7 +13,7 @@ public class MyExceptionHandling {
         } finally {
             System.out.println("This is finally");
         }
-        method3(5,1);
+        method3(5,8);
     }
 
     public static void method1()
@@ -30,6 +30,5 @@ public class MyExceptionHandling {
             throw new RuntimeException("B is greater than A");
         }
         System.out.println(a-b);
-
     }
 }
