@@ -7,6 +7,12 @@ public class TheMain {
         AnimalFly fly = new AnimalFly();
         fly.forwardRun();
         fly.lift();
+        fly.gliding();
+        fly.landing();
         fly.justTesting();// Uses the default method from the interface.
+        Flyable bird = new AnimalFly();
+        bird.forwardRun();
+        bird.justTesting();
+        bird.landing();
     }
 }
