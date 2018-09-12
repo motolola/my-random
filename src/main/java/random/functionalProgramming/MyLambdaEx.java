@@ -17,7 +17,10 @@ public class MyLambdaEx {
 
         int mySum = numbers.stream()
                 .filter(num -> (num >= 5))
+                //map((n) -> n-2)
                 .reduce(0, Integer::sum);
         System.out.println(mySum);
+
+        numbers.forEach(i -> System.out.println(i+" squared = "+i*i));
     }
 }
