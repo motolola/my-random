@@ -47,5 +47,15 @@ public class MyLambdaEx {
                 .filter(s -> s.startsWith("P"))
                 .sorted()
                 .forEach(System.out::println);
+        System.out.println(sumDigits(4579001));
+
+    }
+
+    public static int sumDigits(int value)
+    {
+        if(value < 1){
+            return 0;
+        }
+        return value % 10 + sumDigits((value - (value%10))/10);
     }
 }

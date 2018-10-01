@@ -1,8 +1,5 @@
 package random;
 
-import com.sun.codemodel.internal.JForEach;
-
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -25,13 +22,11 @@ public class MyString {
         String logStr = "cat bot car dog car";
         String[] mySpli = logStr.split(" ");
         Map map = new HashMap<String, Integer>();
+
         for (int i = 0; i < mySpli.length; i++){
             System.out.println(mySpli[i]);
 
             if (map.containsKey(mySpli[i])){
-
-                System.out.println("++++++");
-                System.out.println((int)(map.get(mySpli[i])));
                 int val = (int)(map.get(mySpli[i]));
 
                 map.put(mySpli[i], val+1);
