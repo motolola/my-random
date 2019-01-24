@@ -56,6 +56,6 @@ public class MyLambdaEx {
         if(value < 1){
             return 0;
         }
-        return value % 10 + sumDigits((value - (value%10))/10);
+        return value % 10 + sumDigits((value - value%10)/10);
     }
 }

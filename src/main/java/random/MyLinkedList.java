@@ -1,7 +1,7 @@
 package random;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.*;
+import java.util.stream.Stream;
 
 public class MyLinkedList {
 
@@ -9,6 +9,8 @@ public class MyLinkedList {
     System.out.println("I am here");
     tryLink();
     tryArrayList();
+    tryHashSet();
+    tryHashMap();
 	}
 	public static void tryLink() {
 		LinkedList<String> linkedList = new LinkedList<>();
@@ -42,7 +44,47 @@ public class MyLinkedList {
 		myArrayList.remove(3);
 		System.out.println(myArrayList);
 		System.out.println(myArrayList.contains("Pete"));
-		
 	}
+
+	public static void tryHashSet()
+    {
+        Set mySet = new HashSet();
+        mySet.add(new String("boy"));
+        mySet.add(new String("girl"));
+        mySet.add(new String("man"));
+        mySet.add(new String("woman"));
+
+        System.out.println(mySet);
+        System.out.println(mySet.size());
+        System.out.println(mySet);
+
+        System.out.println("+++++++++++++++++++");
+        System.out.println("+++++++++++++++++++");
+
+        Iterator<String> it = mySet.iterator();
+        while (it.hasNext()){
+            String obj = it.next();
+            System.out.println(obj);
+        }
+
+    }
+
+    public static void tryHashMap()
+    {
+        Map myMap = new HashMap();
+
+        myMap.put(1, "Woman");
+        myMap.put(2, "Lady");
+        myMap.put(3, "Queen");
+
+        System.out.println(" +++++++++++++++++++ ");
+        System.out.println(" +++++++++++++++++++ ");
+        System.out.println(" +++ HASHMAP +++ ");
+        System.out.println(myMap);
+
+        myMap.replace(2, "Mama");
+
+        System.out.println(myMap);
+    }
 
 }

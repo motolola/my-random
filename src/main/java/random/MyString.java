@@ -37,5 +37,6 @@ public class MyString {
         System.out.println("++++++++++");
         System.out.println(map.values());
         System.out.println(map.keySet());
+        System.out.println(map);
     }
 }
