@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
  * Created by Akinjide Motolola.
  * email: motolola@icloud.com
  */
-@Service
+@Service("goatanimal")
 public class GoatAnimal implements Animal
 {
     @Override
