@@ -1,23 +1,29 @@
 package com.motolola.practice.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
-public class HomeController {
+public class HomeController
+{
 
-    @Autowired
-    RestTemplate restTemplate;
+    @Autowired private RestTemplate restTemplate;
 
-    @RequestMapping(value = "/")
-    public String home(){
-        return "I am a boy iof great learning ability";
+    @GetMapping(value = "/")
+    public String home()
+    {
+        final int val1 = 23;
+        final int val2 = 12;
+        final int sum = val1 + val2;
+        return "The sum is " + sum;
     }
 
-    @RequestMapping("/quote")
-    public String quote(){
-            return restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api", String.class);
+    @GetMapping("/quote")
+    public String quote()
+    {
+            return this.restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api", String.class);
     }
 }
